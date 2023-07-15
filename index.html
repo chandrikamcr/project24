@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+</head>
+<main>
+    <header>
+        <!-- insert banner image and logo as seen in the sample website, the links for the images are provided in the question -->
+        <img id="toplogo" src="logo..png">
+        <h1 class="top_text">
+            Understanding the fundamentals of state in Javascript
+        </h1>
+        <p class="name">
+            Billa Manoj Manfred
+        </p>
+    </header>
+
+    <body>
+        <div class="c">
+        <div class="introduction">
+            <p>Chapter 3 from the book; Vumbula React — Co-authored by
+                John Kagga
+            </p>
+
+            <p>
+                In earlier chapters, we’ve dealt mostly with functional React components that do not require state
+                management. This chapter’s main focus is on state, its management and components that utilise it in
+                React.
+            </p>
+        </div>
+
+        <div class="section-1">
+            <h2>
+                What is State?
+            </h2>
+
+            <p>
+                State is a JavaScript object that stores a component’s dynamic data and determines the component’s
+                behaviour. Because state is dynamic, it enables a component to keep track of changing information in
+                between renders and for it to be dynamic and interactive.
+            </p>
+
+            <p>
+                State is similar to props but unlike props, it is private to a component and is controlled solely by the
+                said component. In the examples from previous chapters, the behaviour of components has primarily
+                depended on the props that are passed down to them. In those cases, the components that receive the
+                props have no control over them because props are read-only.
+            </p>
+        </div>
+
+        <div class="section-2">
+            <h2>
+                Adding State to a Class Component
+            </h2>
+
+            <pre>
+                class Greeting extends React.Component {
+                    render(){
+                      return &lt;h1&gt;I’m a component in need of some state! &lt;/h1&gt;;
+                    }
+                  }
+            </pre>
+
+            <p>
+                Adding state to the Greeting component above involves defining within the class component, a constructor
+                function that assigns the initial state using this.state.
+            </p>
+
+            <pre>
+                class Greeting extends React.Component {
+                    constructor(props) {
+                     super(props);
+                       // Define your state object here
+                       this.state = {
+                         name: ‘Jane Doe’
+                       }
+                     }
+                     render(){
+                       return &lt;h1&gt;Hello { this.state.name }&lt;/h1&gt;;
+                     }
+                  }
+            </pre>
+        </div>
+
+        <div class="third-section">
+            <h2>
+                Investigating State using React Dev Tools
+            </h2>
+
+            <p>
+                The devtools are available for download on both Mozilla Firefox Add-ons and the Chrome Web Store. Follow
+                the appropriate link to install the devtools depending on which browser you have installed on your
+                computer.
+            </p>
+
+            <p>
+                Throughout the rest of this book, Chrome will be used as the browser of choice. In order to confirm
+                successful installation of the devtools on Chrome, open the developer tools window using Cmd+Opt+I on a
+                Mac or Ctrl+Alt+I on a windows PC. You should now see a React tab.
+            </p>
+        </div>
+        </div>
+    </body>
+</main>
+
+
+</body>
+
+</html>
+<style>
+    header {
+    background-color: #263d36;
+    color: white;
+    background-image: url(background.webp);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 1.2;
+    max-width: none;
+    padding: 10vw 2em;
+    text-align: center;
+}
+#toplogo {
+    display: inline-block;
+    height: 120px;
+    vertical-align: top;
+    width: 120px;
+}
+.top_text{
+    color: white;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+h1{
+    color: white;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+.name{
+    /* border: 1px solid #e81c4f; */
+    border-radius: 290486px;
+    color: white;
+    font-size: 0.6em;
+    letter-spacing: 0.2em;
+    padding: 1em 2em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+    p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.c{
+  margin: 0 auto;
+  max-width: 50em;
+}
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+.c {
+  line-height: 1.5;
+  padding: 4em 1em;
+}
+
+h2 {
+  margin-top: 1em;
+  padding-top: 1em;
+}
+.c {
+  color: #555;
+}
+h1,
+h2,
+strong {
+  color: #333;
+}
+code,
+pre {
+  background: #eee;
+}
+
+code {
+  padding: 2px 4px;
+  vertical-align: text-bottom;
+}
+
+pre {
+  padding: 1em;
+}
+.c {
+  color: #566b78;
+}
+
+code,
+pre {
+  background: #f5f7f9;
+  border-bottom: 1px solid #d8dee9;
+  color: #a7adba;
+}
+
+pre {
+  border-left: 2px solid #69c;
+}
+
+</style>
